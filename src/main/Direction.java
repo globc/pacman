@@ -3,9 +3,9 @@ package main;
 public enum Direction {
 
 	UP,
-	RIGHT,
+	LEFT,
 	DOWN,
-	LEFT;
+	RIGHT;
 	
 	public int intValue() {
 		int dir;
@@ -14,7 +14,7 @@ public enum Direction {
 		case UP:
 			dir = 0;
 			break;
-		case RIGHT:
+		case LEFT:
 			dir = 1;
 			break;
 		case DOWN:
@@ -34,13 +34,13 @@ public enum Direction {
 		case UP:
 			y = 1;
 			break;
-		case RIGHT:
-			x = 1;
+		case LEFT:
+			x = -1;
 			break;
 		case DOWN:
 			y = -1;
 			break;
-		default: x = -1;
+		default: x = 1;
 		}
 		
 		return new Vec2D(x, y);
